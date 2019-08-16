@@ -21,7 +21,7 @@ import com.ymmm.miaosha.domain.MiaoshaUser;
 public class UserUtil {
 	
 	private static void createUser(int count) throws Exception{
-		List<MiaoshaUser> users = new ArrayList<MiaoshaUser>(count);
+		List<MiaoshaUser> users = new ArrayList<>(count);
 		//生成用户
 		for(int i=0;i<count;i++) {
 			MiaoshaUser user = new MiaoshaUser();

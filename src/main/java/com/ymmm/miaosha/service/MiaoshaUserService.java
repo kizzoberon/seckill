@@ -28,7 +28,7 @@ public class MiaoshaUserService {
 	@Autowired
     RedisService redisService;
 	
-	public MiaoshaUser getById(long id) {
+	private MiaoshaUser getById(long id) {
 		//取缓存
 		MiaoshaUser user = redisService.get(MiaoshaUserKey.getById, ""+id, MiaoshaUser.class);
 		if(user != null) {
