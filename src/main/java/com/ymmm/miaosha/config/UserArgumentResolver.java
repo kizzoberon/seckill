@@ -14,9 +14,6 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 @Service
 public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 
-	@Autowired
-	MiaoshaUserService userService;
-	
 	public boolean supportsParameter(MethodParameter parameter) {
 		Class<?> clazz = parameter.getParameterType();
 		return clazz==MiaoshaUser.class;
