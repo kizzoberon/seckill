@@ -22,7 +22,7 @@ import com.alibaba.fastjson.JSON;
 
 
 @Service
-public class AccessInterceptor  extends HandlerInterceptorAdapter{
+public class AccessInterceptor extends HandlerInterceptorAdapter{
 
 	@Autowired
 	MiaoshaUserService userService;

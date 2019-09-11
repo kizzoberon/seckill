@@ -2,8 +2,6 @@ package com.ymmm.miaosha.config;
 
 import com.ymmm.miaosha.access.UserContext;
 import com.ymmm.miaosha.domain.MiaoshaUser;
-import com.ymmm.miaosha.service.MiaoshaUserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.support.WebDataBinderFactory;

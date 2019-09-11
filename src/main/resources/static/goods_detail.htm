@@ -136,7 +136,7 @@ function countDown(){
 	   $("#buyButton").attr("disabled", true);
 	   $("#miaoshaTip").html("秒杀倒计时："+remainSeconds+"秒");
 		timeout = setTimeout(function(){
-			$("#countDown").text(remainSeconds - 1);
+			//$("#countDown").text(remainSeconds - 1);
 			$("#remainSeconds").val(remainSeconds - 1);
 			countDown();
 		},1000);

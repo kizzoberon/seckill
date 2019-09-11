@@ -56,7 +56,7 @@ public class MiaoshaController implements InitializingBean {
 	MQSender sender;
 
 	//可改进在redis中设定一个标记量
-	private HashMap<Long, Boolean> localOverMap =  new HashMap<Long, Boolean>();
+	private HashMap<Long, Boolean> localOverMap =  new HashMap<>();
 	
 	/**
 	 * 系统初始化
@@ -175,7 +175,7 @@ public class MiaoshaController implements InitializingBean {
     @ResponseBody
     public Result<String> getMiaoshaPath(MiaoshaUser user,
     		@RequestParam("goodsId")long goodsId,
-    		@RequestParam(value="verifyCode", defaultValue="0")int verifyCode
+    		@RequestParam(value="verifyCode", defaultValue="99999")int verifyCode
     		) {
     	if(user == null) {
     		return Result.error(CodeMsg.SESSION_ERROR);
@@ -184,7 +184,7 @@ public class MiaoshaController implements InitializingBean {
     	if(!check) {
     		return Result.error(CodeMsg.REQUEST_ILLEGAL);
     	}
-    	String path  =miaoshaService.createMiaoshaPath(user, goodsId);
+    	String path = miaoshaService.createMiaoshaPath(user, goodsId);
     	return Result.success(path);
     }
     
